@@ -108,5 +108,6 @@ def upload_key():
 		return 'Invalid File Format !'
 
 if __name__ == '__main__':
-	#app.run(host='127.0.0.1', port=8000, debug=True)
-	app.run()
+	port = int(os.environ.get('PORT', 5000))
+	app.run(port=port, debug=True)
+	#app.run()
